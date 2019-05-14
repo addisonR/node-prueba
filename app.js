@@ -7,4 +7,6 @@ app.listen(3000, ()=>{
     console.log('runing in port: 3000');
 })
  
-module.exports = app;
+module.exports = function() {
+    return 'hello world';
+}

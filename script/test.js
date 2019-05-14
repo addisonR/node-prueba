@@ -1,10 +1,8 @@
-var request = require('supertest');
+var assert = require('chai').assert;
 var app = require('../app.js');
  
-describe('GET /', function() {
-  it('respond with hello world', function(done) {
-    request(app)
-      .get('/')
-      .expect('hello world', done);
+describe('App', function() {
+  it('app should return hello world', function() {
+    assert.equal(app(),'hello world');
   });
 });
